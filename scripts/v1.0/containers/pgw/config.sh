@@ -14,8 +14,8 @@ sudo ovs-vsctl add-port br0 int1 -- set Interface int1 type=internal
 sudo ovs-vsctl add-port br0 int2 -- set Interface int2 type=internal
 
 # Set bridge configuration parameters
-ovs-vsctl set bridge br0 protocols=OpenFlow10
-ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000004
+sudo ovs-vsctl set bridge br0 protocols=OpenFlow10
+sudo ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000004
 
 # Add physical interfaces as ports
 sudo ovs-vsctl add-port br0 eth2
@@ -34,9 +34,9 @@ sudo ovs-vsctl set-controller br0 tcp:10.128.41.1:6653
 
 # Set MTU values for the interfaces, default is 2500 bytes
 if [ $# -ne 1 ]; then
-	ifconfig eth2 mtu 2500
-	ifconfig eth3 mtu 2500
-else
-	ifconfig eth2 mtu $1
-	ifconfig eth3 mtu $1
+	sudo ifconfig eth2 mtu 2500
+	sudo ifconfig eth3 mtu 2500
+else 
+	sudo ifconfig eth2 mtu $1
+	sudo ifconfig eth3 mtu $1
 fi

@@ -19,6 +19,6 @@ sudo ifconfig eth2 10.126.41.4 netmask 255.255.0.0
 sudo ifconfig eth3 10.128.41.4 netmask 255.255.0.0
 
 # Set default MTU values for the interfaces
-ifconfig eth1 mtu 1500
-ifconfig eth2 mtu 1500
-ifconfig eth3 mtu 1500
+sudo ifconfig eth1 mtu 1500
+sudo ifconfig eth2 mtu 1500
+sudo ifconfig eth3 mtu 1500
